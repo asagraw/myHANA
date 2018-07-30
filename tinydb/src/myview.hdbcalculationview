@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="tinyworld.tinydb::myview" applyPrivilegeType="NONE" dataCategory="DEFAULT" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="myview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="tinyworld.tinydb::tinyf.country">
+    <resourceUri>tinyworld.tinydb::tinyf.country</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="tinyworld.tinydb::tinyf.country" filterExpressionLanguage="SQL">
+  <attributes>
+    <attribute id="name" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="name"/>
+      <keyMapping columnObjectName="tinyf.country" columnName="name"/>
+    </attribute>
+    <attribute id="partof_continent" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="partof_continent"/>
+      <keyMapping columnObjectName="tinyf.country" columnName="partof.continent"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/></logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
