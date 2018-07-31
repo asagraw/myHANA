@@ -27,6 +27,7 @@ modules:
           name: tinyjs_be
           url: '~{url}'
           forwardAuthToken: true
+
 resources:
   - name: hdi_tinydb
     properties:
